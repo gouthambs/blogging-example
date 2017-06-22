@@ -34,7 +34,7 @@ def create_app(config_name):
     principal = Principal()
     principal.init_app(app)
 
-    from app.models import User, Sentence\
+    from app.models import User, Sentence, Quiz, Answer
 
     # Flask-Blogging database config
     with app.app_context():

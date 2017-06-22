@@ -26,3 +26,14 @@ class Sentence(db.Model, BaseModel):
 
     def __repr__(self):
         return '<Sentence: {0}>'.format(self.text)
+
+
+class Quiz(db.Model, BaseModel):
+    id = db.Column(db.Integer, primary_key=True)
+    sentence = db.relationship('Sentence', backref='quiz',
+                                lazy='dynamic')
+
+
+class Answer(db.Model, BaseModel):
+    id = db.Column(db.Integer, primary_key=True)
+    sentence = db.Column(db.Integer, db.ForeignKey('sentence.id'))

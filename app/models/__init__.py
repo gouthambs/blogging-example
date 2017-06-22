@@ -1,3 +1,3 @@
 from .user import User
-from .sentence import Sentence
+from .sentence import Sentence, Quiz, Answer
 

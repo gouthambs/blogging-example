@@ -30,10 +30,10 @@ class Sentence(db.Model, BaseModel):
 
 class Quiz(db.Model, BaseModel):
     id = db.Column(db.Integer, primary_key=True)
-    sentence = db.relationship('Sentence', backref='quiz',
+    quiz_sentence = db.relationship('Sentence', backref='quiz',
                                 lazy='dynamic')
 
 
 class Answer(db.Model, BaseModel):
     id = db.Column(db.Integer, primary_key=True)
-    sentence = db.Column(db.Integer, db.ForeignKey('sentence.id'))
+    answer_sentence = db.Column(db.Integer, db.ForeignKey('sentence.id'))

@@ -99,8 +99,9 @@ def create_app(config_name):
         template_mode='bootstrap3',
         index_view=AdminIndexView()
     )
-
+    Post = storage.post_model
     # Add administrative views here
     admin.add_view(ModelView(User, db.session))
+    admin.add_view(ModelView(Post, db.session))
 
     return app

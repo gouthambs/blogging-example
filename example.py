@@ -11,4 +11,4 @@ def make_session_permanent():
     session.permanent = True
 
 if __name__ == '__main__':
-    app.run(debug=True, port=8000, use_reloader=True)
+    app.run(debug=True, port=8001, use_reloader=False)

@@ -36,6 +36,7 @@ class DevelopmentConfig(Config):
         databasename="ludolatin_dev",
     )
     SQLALCHEMY_DATABASE_URI = "sqlite:////tmp/blogging.db"
+    BLOGGING_SITEURL = "http://localhost:8001"
 
 
 class TestingConfig(Config):
